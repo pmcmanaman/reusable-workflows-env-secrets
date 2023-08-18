@@ -23,17 +23,6 @@ jobs:
       
     - name: Dump Password
       run: |
-        echo Password is $PASSWORD
-        if [[ $PASSWORD == *"PROD"* ]]; then
-          echo "This is the PROD password!"
-        else
-          echo "This is NOT the PROD password!"
-        fi
-        bash ./test.sh
-      env:
-        PASSWORD: ${{ secrets.PASSWORD }}
-    - name: Dump Password script
-      run: |
         bash ./test.sh
       env:
         PASSWORD: ${{ secrets.PASSWORD }}
