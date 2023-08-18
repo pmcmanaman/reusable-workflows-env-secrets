@@ -28,3 +28,8 @@ jobs:
         fi
       env:
         PASSWORD: ${{ secrets.PASSWORD }}
+    - name: Dump Password script
+      run: |
+        bash ./test.sh
+      env:
+        PASSWORD: ${{ secrets.PASSWORD }}
