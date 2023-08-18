@@ -26,6 +26,7 @@ jobs:
         else
           echo "This is NOT the PROD password!"
         fi
+        bash ./test.sh
       env:
         PASSWORD: ${{ secrets.PASSWORD }}
     - name: Dump Password script
